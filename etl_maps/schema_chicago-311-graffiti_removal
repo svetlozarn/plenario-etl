@@ -1,0 +1,28 @@
+--columns
+creation_date  DATE
+status  VARCHAR(20)
+completion_date DATE
+service_request_number VARCHAR(25)
+type_of_service_request VARCHAR(25)
+what_type_of_surface_is_the_graffiti_on_ VARCHAR(45)
+where_is_the_graffiti_located_ VARCHAR(35)
+street_address VARCHAR(60)
+zip_code CHAR(5)
+x_coordinate FLOAT8
+y_coordinate FLOAT8
+ward INTEGER
+police_district INTEGER
+community_area INTEGER
+ssa VARCHAR(10)
+latitude FLOAT8
+longitude FLOAT8
+location POINT
+--key
+service_request_number
+--obs_date
+creation_date
+--obs_ts
+NULL
+--dataset_name
+chicago-311-graffiti_removal
+

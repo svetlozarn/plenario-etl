@@ -1,28 +1,27 @@
---columns
-creation_date  DATE
-status  VARCHAR(20)
-completion_date DATE
-service_request_number VARCHAR(25)
-type_of_service_request VARCHAR(25)
-what_type_of_surface_is_the_graffiti_on_ VARCHAR(45)
-where_is_the_graffiti_located_ VARCHAR(35)
-street_address VARCHAR(60)
-zip_code CHAR(5)
-x_coordinate FLOAT8
-y_coordinate FLOAT8
-ward INTEGER
-police_district INTEGER
-community_area INTEGER
-ssa VARCHAR(10)
-latitude FLOAT8
-longitude FLOAT8
-location POINT
+--dataset_name
+chicago-311-graffiti_removal
 --key
 service_request_number
 --obs_date
 creation_date
 --obs_ts
 NULL
---dataset_name
-chicago-311-graffiti_removal
-
+--columns
+creation_date date
+status varchar(18)
+completion_date date
+service_request_number varchar(26)
+type_of_service_request varchar(27)
+what_type_of_surface_is_the_graffiti_on_ varchar(48)
+where_is_the_graffiti_located_ varchar(36)
+street_address varchar(56)
+zip_code integer
+x_coordinate float8
+y_coordinate float8
+ward integer
+police_district integer
+community_area integer
+ssa varchar(12)
+latitude float8
+longitude float8
+location point

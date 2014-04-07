@@ -1,27 +1,23 @@
---columns
-COMPLAINT_ID VARCHAR(20)
-COMPLAINT_TYPE VARCHAR(50)
-MAPPED_LOCATION VARCHAR(100)
-STREET_NUMBER_FROM INTEGER
-STREET_NUMBER_TO INTEGER
-DIRECTION CHAR(10)
-STREET_NAME VARCHAR(30)
-STREET_TYPE VARCHAR(15)
-INSPECTOR VARCHAR(10)
-COMPLAINT_DATE DATE
-COMPLAINT_DETAIL VARCHAR(3600)
-INSPECTION_LOG VARCHAR(3600)
-DATA_SOURCE VARCHAR(50)
-MODIFIED_DATE DATE
-LOCATION POINT
-LATITUDE FLOAT8
-LONGITUDE FLOAT8
---key
-COMPLAINT_ID
---obs_date
-COMPLAINT_DATE
---obs_ts
-NULL
 --dataset_name
 chicago-environmental-complaints
-
+--key
+complaint_id
+--obs_date
+complaint_date
+--obs_ts
+NULL
+--columns
+complaint_id varchar(14)
+complaint_type varchar(49)
+address varchar(103)
+street_number integer
+street_number_to integer
+direction varchar(10)
+street_name varchar(26)
+street_type varchar(13)
+inspector varchar(10)
+complaint_date date
+complaint_detail varchar(3756)
+inspection_log varchar(4242)
+data_source varchar(34)
+modified_date date

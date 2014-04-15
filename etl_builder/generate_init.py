@@ -118,7 +118,6 @@ DAT_{datasettag};
            parseloc=parseLoc)
 
     fp = open(sqlDir + "init_" + datasetName + ".sql", 'w')
-    fp.write("\\timing\n")
     fp.write(sqlInit)
 
 

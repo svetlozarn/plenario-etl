@@ -10,8 +10,8 @@ import csv
 metadataURL = "https://data.cityofchicago.org/api/views/"
 dataURL = "https://data.cityofchicago.org/d/"
 datasetList = "datasets.csv"
-metadataDir = "./"
-metadataFiles = ["meta1.csv", "meta2.csv", "meta3.csv"]
+metadataDir = "../meta/"
+metadataFiles = ["meta_master.csv", "meta_attributes.csv", "meta_misc.csv"]
 
 def write_meta(metadataID, datasetName):
 
@@ -74,7 +74,7 @@ def write_meta(metadataID, datasetName):
 
 headers = [["dataset_name","human_name","description","obs_from","obs_to","bbox","source_url","update_freq"],
            ["dataset_name","attribute_name","attribute_description"],
-           ["dataset_name","attribute_name","attribute_value"]]
+           ["dataset_name","meta_attribute_name","meta_attribute_value"]]
 
 #create metadata csvs and write headers
 for i in range(3):

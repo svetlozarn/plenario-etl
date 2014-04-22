@@ -1,0 +1,63 @@
+dataset_name,meta_attribute_name,meta_attribute_value
+chicago-crimes-all,Frequency,"Data is updated daily, Tuesday through Sunday"
+chicago-crimes-all,Last Updated Date via Automated Load,2013/12/03 05:00:01
+chicago-crimes-all,Time Period,"2001 to present, minus the most recent seven days"
+chicago-crimes-all,Data Owner,Police
+chicago-business-licenses,Frequency,Data is updated daily
+chicago-business-licenses,Last Updated Date via Automated Load,
+chicago-business-licenses,Time Period,2006 to present
+chicago-business-licenses,Data Owner,Business Affairs & Consumer Protection
+chicago-environmental-complaints,Frequency,
+chicago-environmental-complaints,Last Updated Date via Automated Load,
+chicago-environmental-complaints,Time Period,
+chicago-environmental-complaints,Data Owner,Chicago Department of Public Health
+chicago-311-graffiti_removal,Frequency,Data is updated daily
+chicago-311-graffiti_removal,Last Updated Date via Automated Load,
+chicago-311-graffiti_removal,Time Period,"All open requests and all completed requests since January 1, 2011"
+chicago-311-graffiti_removal,Data Owner,Streets & Sanitation
+chicago-311-tree-trims,Frequency,Data is updated daily
+chicago-311-tree-trims,Last Updated Date via Automated Load,
+chicago-311-tree-trims,Time Period,"All open requests and requests completed since January 1, 2011"
+chicago-311-tree-trims,Data Owner,Streets & Sanitation
+chicago_311_garbage_carts,Frequency,Data is updated daily
+chicago_311_garbage_carts,Last Updated Date via Automated Load,
+chicago_311_garbage_carts,Time Period,"All open requests and all completed requests since January 1, 2011"
+chicago_311_garbage_carts,Data Owner,Streets & Sanitation
+chicago_311_rodent_baiting,Frequency,Data is updated daily
+chicago_311_rodent_baiting,Last Updated Date via Automated Load,
+chicago_311_rodent_baiting,Time Period,"All open requests and all completed requests since January 1, 2011"
+chicago_311_rodent_baiting,Data Owner,Streets & Sanitation
+chicago_311_potholes_reported,Frequency,Data is updated daily
+chicago_311_potholes_reported,Last Updated Date via Automated Load,
+chicago_311_potholes_reported,Time Period,"All open requests and all completed requests since January 1, 2011"
+chicago_311_potholes_reported,Data Owner,Transportation
+chicago_311_sanitation_code_complaints,Frequency,Data is updated daily
+chicago_311_sanitation_code_complaints,Last Updated Date via Automated Load,
+chicago_311_sanitation_code_complaints,Time Period,"All open requests and all completed requests since January 1, 2011"
+chicago_311_sanitation_code_complaints,Data Owner,Streets & Sanitation
+chicago_311_alley_lights_out,Frequency,Data is updated daily
+chicago_311_alley_lights_out,Last Updated Date via Automated Load,
+chicago_311_alley_lights_out,Time Period,"All open requests and all completed requests since January 1, 2011"
+chicago_311_alley_lights_out,Data Owner,Transportation
+chicago_311_street_lights_one_out,Frequency,Data is updated daily
+chicago_311_street_lights_one_out,Last Updated Date via Automated Load,
+chicago_311_street_lights_one_out,Time Period,"All open requests and all completed requests since January 1, 2011"
+chicago_311_street_lights_one_out,Data Owner,Transportation
+chicago_311_street_lights_all_out,Frequency,Data is updated daily
+chicago_311_street_lights_all_out,Last Updated Date via Automated Load,
+chicago_311_street_lights_all_out,Time Period,"All open requests and all completed requests since January 1, 2011"
+chicago_311_street_lights_all_out,Data Owner,Transportation
+chicago_food_inspections,Frequency,Updated daily
+chicago_food_inspections,Last Updated Date via Automated Load,
+chicago_food_inspections,Time Period,January 2010 to present
+chicago_food_inspections,Data Owner,Public Health
+chicago_building_violations,Frequency,Data is updated daily
+chicago_building_violations,Last Updated Date via Automated Load,2014/04/21 07:54:12
+chicago_building_violations,Time Period,"January 1, 2006 to present"
+chicago_building_violations,Data Owner,Buildings
+chicago_building_permits,Frequency,"Data is updated daily, Monday through Saturday"
+chicago_building_permits,Time Period,2006 to present
+chicago_building_permits,Data Owner,Buildings
+chicago_311_vacant_and_abandoned_building,Frequency,Data is updated daily
+chicago_311_vacant_and_abandoned_building,Time Period,"All completed requests since January 1, 2010"
+chicago_311_vacant_and_abandoned_building,Data Owner,Buildings

@@ -1,0 +1,53 @@
+dataset_name,attribute_name,attribute_description
+chicago-crimes-all,District,District
+chicago-crimes-all,Community Area,Community Area
+chicago-business-licenses,ID,A calculated ID for each record.
+chicago-business-licenses,LICENSE ID,An internal database ID for each record.  Each license can have multiple records as it goes through renewals and other transactions.  See the LICENSE NUMBER field for the number generally known to the public and used in most other data sources that refer to the license.
+chicago-business-licenses,ACCOUNT NUMBER,"The account number of the business owner, which will stay consistent across that owner's licenses and can be used to find the owner in the Business Owners dataset."
+chicago-business-licenses,SITE NUMBER,An internal database ID indicating the location of this licensed business to account for business owners with more than one location.
+chicago-business-licenses,LICENSE NUMBER,"The license number known to the public and generally used in other data sources that refer to the license. This is the field most users will want for most purposes. Each license has a single license number that stays consistent throughout the lifetime of the license. By contrast, the LICENSE ID field is an internal database ID and not generally useful to external users."
+chicago-business-licenses,APPLICATION CREATED DATE,The date the business license application was created.  RENEW type records do not have an application.
+chicago-business-licenses,APPLICATION REQUIREMENTS COMPLETE,"For all application types except RENEW, this is the date all required application documents were received.  For RENEW type records, this is the date the record was created."
+chicago-business-licenses,CONDITIONAL APPROVAL,This pertains to applications that contain liquor licenses. Customers may request a conditional approval prior to building out the space.
+chicago-business-licenses,LICENSE APPROVED FOR ISSUANCE,This is the date the license was ready for issuance. Licenses may not be issued if the customer owes debt to the City. 
+chicago-business-licenses,SSA,"Special Service Areas  are local tax districts that fund expanded services and programs, to foster commercial and economic development, through a localized property tax. In other cities these areas are sometimes called Business Improvement Districts (BIDs). This portal contains a map of all Chicago SSAs"
+chicago-environmental-complaints,COMPLAINT ID,"The unique identifier of the complaint incident. For Historic Department of Environment records, this ID is prefixed with ""DOECOMP""."
+chicago-environmental-complaints,COMPLAINT TYPE,Specifies the type of complaint work order. 
+chicago-environmental-complaints,STREET NUMBER FROM,"The numerical portion of the address. For ranged address, this is the lower number of the range. "
+chicago-environmental-complaints,STREET NUMBER TO,This is the upper number of a ranged address. This value is blank if the address is not a ranged address.
+chicago-environmental-complaints,DIRECTION,"The direction (N,S,E,W) portion of the address."
+chicago-environmental-complaints,STREET NAME,Street name portion of the address.
+chicago-environmental-complaints,STREET TYPE,"The street suffix (e.g. ST = Street, AVE= Avenue, BLVD=Boulevard)"
+chicago-environmental-complaints,INSPECTOR,The inspector badge number or employee ID of the inspector or engineer who conducted the inspection.  
+chicago-environmental-complaints,COMPLAINT DATE,The date the complaint was received by the department. 
+chicago-environmental-complaints,COMPLAINT DETAIL,Brief description of the nature of the complaint.  
+chicago-environmental-complaints,INSPECTION LOG,This is the inspector’s narrative log of the complaint inspection.
+chicago-environmental-complaints,DATA SOURCE,The city department that collected the data.  
+chicago-311-graffiti_removal,SSA,"Special Service Areas are local tax districts that fund expanded services and programs, to foster commercial and economic development, through a localized property tax. In other cities these areas are sometimes called Business Improvement Districts (BIDs). This portal contains a map of all Chicago SSAs"
+chicago_311_garbage_carts,SSA,"Special Service Areas are local tax districts that fund expanded services and programs, to foster commercial and economic development, through a localized property tax. In other cities these areas are sometimes called Business Improvement Districts (BIDs). This portal contains a map of all Chicago SSAs"
+chicago_311_potholes_reported,SSA,"Special Service Areas are local tax districts that fund expanded services and programs, to foster commercial and economic development, through a localized property tax. In other cities these areas are sometimes called Business Improvement Districts (BIDs). This portal contains a map of all Chicago SSAs"
+chicago_food_inspections,DBA Name,Doing Business As
+chicago_food_inspections,AKA Name,Also Known As
+chicago_building_violations,VIOLATION CODE,The Violation Code. See Violation Description for the description of what the code means.
+chicago_building_violations,VIOLATION STATUS,"Complied = Violations have been addressed;
+Open = Violations are open;
+No Entry = Inspector could not gain access to the premise to conduct an inspection."
+chicago_building_violations,VIOLATION DESCRIPTION,The description of the violation corresponding to the Violation Code value.
+chicago_building_violations,SSA,"Special Service Areas are local tax districts that fund expanded services and programs, to foster commercial and economic development, through a localized property tax. In other cities these areas are sometimes called Business Improvement Districts (BIDs). This portal contains a map of all Chicago SSAs"
+chicago_building_permits,         AMOUNT_WAIVED,Fee amount waived by City Council ordinance
+chicago_building_permits,   AMOUNT_PAID,Fee amount customer has paid.
+chicago_building_permits,    TOTAL_FEE,"The amount waived plus amount paid plus any amount that may still be outstanding. This total can include various fees that are part of the permit fee, such as zoning, open space, deposit, or missed appointment.  It can also include stop work order fees, reinspection fees, and various penalty fees."
+chicago_311_vacant_and_abandoned_building,SERVICE REQUEST TYPE,Service Request Type
+chicago_311_vacant_and_abandoned_building,SERVICE REQUEST NUMBER,Service Request Number
+chicago_311_vacant_and_abandoned_building,DATE SERVICE REQUEST WAS RECEIVED,Date Service Request Was Received
+chicago_311_vacant_and_abandoned_building,"LOCATION OF BUILDING ON THE LOT (IF GARAGE, CHANGE TYPE CODE TO BGD).",Location of Building on the Lot
+chicago_311_vacant_and_abandoned_building,IS THE BUILDING DANGEROUS OR HAZARDOUS?,is the Building Dangerous or Hazardous?
+chicago_311_vacant_and_abandoned_building,IS BUILDING OPEN OR BOARDED?,Is Building Open or Boarded?
+chicago_311_vacant_and_abandoned_building,"IF THE BUILDING IS OPEN, WHERE IS THE ENTRY POINT?","If the Building is Open, Where is the Entry Point?"
+chicago_311_vacant_and_abandoned_building,IS THE BUILDING CURRENTLY VACANT OR OCCUPIED?,Is the Building Currently Vacant or Occupied?
+chicago_311_vacant_and_abandoned_building,IS THE BUILDING VACANT DUE TO FIRE?,Is the Building Vacant Due to Fire?
+chicago_311_vacant_and_abandoned_building,"ANY PEOPLE USING PROPERTY? (HOMELESS, CHILDEN, GANGS)","Any People Using Property (e.g., Homeless, Children, Gangs)?"
+chicago_311_vacant_and_abandoned_building,ADDRESS STREET NUMBER,Address Street Number
+chicago_311_vacant_and_abandoned_building,ADDRESS STREET DIRECTION,Address Street Direction
+chicago_311_vacant_and_abandoned_building,ADDRESS STREET NAME,Address Street Name
+chicago_311_vacant_and_abandoned_building,ADDRESS STREET SUFFIX,Address Street Suffix

@@ -2,7 +2,6 @@ ijzp-q8t2,chicago-crimes-all,id,orig_date,NULL
 r5kz-chrr,chicago-business-licenses,license_id,payment_date,NULL
 fypr-ksnz,chicago-environmental-complaints,complaint_id,complaint_date,NULL
 hec5-y4x5,chicago-311-graffiti_removal,service_request_number,creation_date,NULL
-uxic-zsuj,chicago-311-tree-trims,service_request_number,creation_date,NULL
 9ksk-na4q,chicago_311_garbage_carts,service_request_number,creation_date,NULL
 97t6-zrhs,chicago_311_rodent_baiting,service_request_number,creation_date,NULL
 7as2-ds3y,chicago_311_potholes_reported,service_request_number,creation_date,NULL

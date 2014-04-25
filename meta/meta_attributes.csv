@@ -9,20 +9,20 @@ chicago-business-licenses,LICENSE NUMBER,"The license number known to the public
 chicago-business-licenses,APPLICATION CREATED DATE,The date the business license application was created.  RENEW type records do not have an application.
 chicago-business-licenses,APPLICATION REQUIREMENTS COMPLETE,"For all application types except RENEW, this is the date all required application documents were received.  For RENEW type records, this is the date the record was created."
 chicago-business-licenses,CONDITIONAL APPROVAL,This pertains to applications that contain liquor licenses. Customers may request a conditional approval prior to building out the space.
-chicago-business-licenses,LICENSE APPROVED FOR ISSUANCE,This is the date the license was ready for issuance. Licenses may not be issued if the customer owes debt to the City. 
+chicago-business-licenses,LICENSE APPROVED FOR ISSUANCE,This is the date the license was ready for issuance. Licenses may not be issued if the customer owes debt to the City.
 chicago-business-licenses,SSA,"Special Service Areas  are local tax districts that fund expanded services and programs, to foster commercial and economic development, through a localized property tax. In other cities these areas are sometimes called Business Improvement Districts (BIDs). This portal contains a map of all Chicago SSAs"
 chicago-environmental-complaints,COMPLAINT ID,"The unique identifier of the complaint incident. For Historic Department of Environment records, this ID is prefixed with ""DOECOMP""."
-chicago-environmental-complaints,COMPLAINT TYPE,Specifies the type of complaint work order. 
-chicago-environmental-complaints,STREET NUMBER FROM,"The numerical portion of the address. For ranged address, this is the lower number of the range. "
+chicago-environmental-complaints,COMPLAINT TYPE,Specifies the type of complaint work order.
+chicago-environmental-complaints,STREET NUMBER FROM,"The numerical portion of the address. For ranged address, this is the lower number of the range."
 chicago-environmental-complaints,STREET NUMBER TO,This is the upper number of a ranged address. This value is blank if the address is not a ranged address.
 chicago-environmental-complaints,DIRECTION,"The direction (N,S,E,W) portion of the address."
 chicago-environmental-complaints,STREET NAME,Street name portion of the address.
 chicago-environmental-complaints,STREET TYPE,"The street suffix (e.g. ST = Street, AVE= Avenue, BLVD=Boulevard)"
-chicago-environmental-complaints,INSPECTOR,The inspector badge number or employee ID of the inspector or engineer who conducted the inspection.  
-chicago-environmental-complaints,COMPLAINT DATE,The date the complaint was received by the department. 
-chicago-environmental-complaints,COMPLAINT DETAIL,Brief description of the nature of the complaint.  
+chicago-environmental-complaints,INSPECTOR,The inspector badge number or employee ID of the inspector or engineer who conducted the inspection.
+chicago-environmental-complaints,COMPLAINT DATE,The date the complaint was received by the department.
+chicago-environmental-complaints,COMPLAINT DETAIL,Brief description of the nature of the complaint.
 chicago-environmental-complaints,INSPECTION LOG,This is the inspector’s narrative log of the complaint inspection.
-chicago-environmental-complaints,DATA SOURCE,The city department that collected the data.  
+chicago-environmental-complaints,DATA SOURCE,The city department that collected the data.
 chicago-311-graffiti_removal,SSA,"Special Service Areas are local tax districts that fund expanded services and programs, to foster commercial and economic development, through a localized property tax. In other cities these areas are sometimes called Business Improvement Districts (BIDs). This portal contains a map of all Chicago SSAs"
 chicago_311_garbage_carts,SSA,"Special Service Areas are local tax districts that fund expanded services and programs, to foster commercial and economic development, through a localized property tax. In other cities these areas are sometimes called Business Improvement Districts (BIDs). This portal contains a map of all Chicago SSAs"
 chicago_311_potholes_reported,SSA,"Special Service Areas are local tax districts that fund expanded services and programs, to foster commercial and economic development, through a localized property tax. In other cities these areas are sometimes called Business Improvement Districts (BIDs). This portal contains a map of all Chicago SSAs"
@@ -34,9 +34,9 @@ Open = Violations are open;
 No Entry = Inspector could not gain access to the premise to conduct an inspection."
 chicago_building_violations,VIOLATION DESCRIPTION,The description of the violation corresponding to the Violation Code value.
 chicago_building_violations,SSA,"Special Service Areas are local tax districts that fund expanded services and programs, to foster commercial and economic development, through a localized property tax. In other cities these areas are sometimes called Business Improvement Districts (BIDs). This portal contains a map of all Chicago SSAs"
-chicago_building_permits,         AMOUNT_WAIVED,Fee amount waived by City Council ordinance
-chicago_building_permits,   AMOUNT_PAID,Fee amount customer has paid.
-chicago_building_permits,    TOTAL_FEE,"The amount waived plus amount paid plus any amount that may still be outstanding. This total can include various fees that are part of the permit fee, such as zoning, open space, deposit, or missed appointment.  It can also include stop work order fees, reinspection fees, and various penalty fees."
+chicago_building_permits,AMOUNT_WAIVED,Fee amount waived by City Council ordinance
+chicago_building_permits,AMOUNT_PAID,Fee amount customer has paid.
+chicago_building_permits,TOTAL_FEE,"The amount waived plus amount paid plus any amount that may still be outstanding. This total can include various fees that are part of the permit fee, such as zoning, open space, deposit, or missed appointment.  It can also include stop work order fees, reinspection fees, and various penalty fees."
 chicago_311_vacant_and_abandoned_building,SERVICE REQUEST TYPE,Service Request Type
 chicago_311_vacant_and_abandoned_building,SERVICE REQUEST NUMBER,Service Request Number
 chicago_311_vacant_and_abandoned_building,DATE SERVICE REQUEST WAS RECEIVED,Date Service Request Was Received

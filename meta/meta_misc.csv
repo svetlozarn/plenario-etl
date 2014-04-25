@@ -1,49 +1,61 @@
 dataset_name,meta_attribute_name,meta_attribute_value
 chicago-crimes-all,Data Owner,Police
+chicago-crimes-all,Time Period,"2001 to present, minus the most recent seven days"
 chicago-crimes-all,attribution,Chicago Police Department
 chicago-crimes-all,category,Public Safety
 chicago-business-licenses,Data Owner,Business Affairs & Consumer Protection
+chicago-business-licenses,Time Period,2006 to present
 chicago-business-licenses,attribution,City of Chicago
 chicago-business-licenses,category,Community & Economic Development
 chicago-environmental-complaints,Data Owner,Chicago Department of Public Health
+chicago-environmental-complaints,Time Period,
 chicago-environmental-complaints,attribution,Chicago Department of Public Health
 chicago-environmental-complaints,category,Environment & Sustainable Development
 chicago-311-graffiti_removal,Data Owner,Streets & Sanitation
+chicago-311-graffiti_removal,Time Period,"All open requests and all completed requests since January 1, 2011"
 chicago-311-graffiti_removal,attribution,City of Chicago
 chicago-311-graffiti_removal,category,Service Requests
-chicago-311-tree-trims,Data Owner,Streets & Sanitation
-chicago-311-tree-trims,attribution,City of Chicago
-chicago-311-tree-trims,category,Service Requests
 chicago_311_garbage_carts,Data Owner,Streets & Sanitation
+chicago_311_garbage_carts,Time Period,"All open requests and all completed requests since January 1, 2011"
 chicago_311_garbage_carts,attribution,City of Chicago
 chicago_311_garbage_carts,category,Service Requests
 chicago_311_rodent_baiting,Data Owner,Streets & Sanitation
+chicago_311_rodent_baiting,Time Period,"All open requests and all completed requests since January 1, 2011"
 chicago_311_rodent_baiting,attribution,City of Chicago
 chicago_311_rodent_baiting,category,Service Requests
 chicago_311_potholes_reported,Data Owner,Transportation
+chicago_311_potholes_reported,Time Period,"All open requests and all completed requests since January 1, 2011"
 chicago_311_potholes_reported,attribution,City of Chicago
 chicago_311_potholes_reported,category,Service Requests
 chicago_311_sanitation_code_complaints,Data Owner,Streets & Sanitation
+chicago_311_sanitation_code_complaints,Time Period,"All open requests and all completed requests since January 1, 2011"
 chicago_311_sanitation_code_complaints,attribution,City of Chicago
 chicago_311_sanitation_code_complaints,category,Service Requests
 chicago_311_alley_lights_out,Data Owner,Transportation
+chicago_311_alley_lights_out,Time Period,"All open requests and all completed requests since January 1, 2011"
 chicago_311_alley_lights_out,attribution,City of Chicago
 chicago_311_alley_lights_out,category,Service Requests
 chicago_311_street_lights_one_out,Data Owner,Transportation
+chicago_311_street_lights_one_out,Time Period,"All open requests and all completed requests since January 1, 2011"
 chicago_311_street_lights_one_out,attribution,City of Chicago
 chicago_311_street_lights_one_out,category,Service Requests
 chicago_311_street_lights_all_out,Data Owner,Transportation
+chicago_311_street_lights_all_out,Time Period,"All open requests and all completed requests since January 1, 2011"
 chicago_311_street_lights_all_out,attribution,City of Chicago
 chicago_311_street_lights_all_out,category,Service Requests
 chicago_food_inspections,Data Owner,Public Health
+chicago_food_inspections,Time Period,January 2010 to present
 chicago_food_inspections,attribution,City of Chicago
 chicago_food_inspections,category,Health & Human Services
 chicago_building_violations,Data Owner,Buildings
+chicago_building_violations,Time Period,"January 1, 2006 to present"
 chicago_building_violations,attribution,City of Chicago
 chicago_building_violations,category,Buildings
 chicago_building_permits,Data Owner,Buildings
+chicago_building_permits,Time Period,2006 to present
 chicago_building_permits,attribution,City of Chicago
 chicago_building_permits,category,Buildings
 chicago_311_vacant_and_abandoned_building,Data Owner,Buildings
+chicago_311_vacant_and_abandoned_building,Time Period,"All completed requests since January 1, 2010"
 chicago_311_vacant_and_abandoned_building,attribution,City of Chicago
 chicago_311_vacant_and_abandoned_building,category,Service Requests

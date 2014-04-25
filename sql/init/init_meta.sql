@@ -10,12 +10,14 @@ CREATE TABLE meta_master(
     human_name VARCHAR(200),
     description TEXT,
     source_url VARCHAR(100),
-    time_period VARCHAR(100),
+    obs_from DATE,
+    obs_to DATE,
+    bbox GEOMETRY(POLYGON,4326),
     update_freq VARCHAR(100),
     PRIMARY KEY(dataset_name)
 );
 
-\copy meta_master(dataset_name, human_name, description, source_url, time_period, update_freq) FROM '../../meta/meta_master.csv' WITH DELIMITER ',' CSV HEADER;
+\copy meta_master(dataset_name, human_name, description, source_url, obs_from, obs_to, bbox, update_freq) FROM '../../meta/meta_master.csv' WITH DELIMITER ',' CSV HEADER;
 
 
 CREATE TABLE meta_attributes(

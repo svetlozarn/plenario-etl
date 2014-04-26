@@ -15,6 +15,8 @@ metadataDir = "../meta/"
 metadataFiles = ["meta_master.csv", "meta_attributes.csv", "meta_misc.csv"]
 
 def write_meta(metadataID, datasetName):
+    
+    datasetTag = datasetName.replace("-", "_")
 
     #load json file from city of Chicago
     js = urllib2.urlopen(metadataURL + metadataID)
@@ -35,7 +37,7 @@ def write_meta(metadataID, datasetName):
     
     obsFrom = obsTo = bbox = ""
     
-    row = [datasetName, humanName, description, sourceURL, obsFrom, obsTo, bbox, updateFreq]
+    row = [datasetTag, humanName, description, sourceURL, obsFrom, obsTo, bbox, updateFreq]
     row = [x.encode('utf8').strip() for x in row]
     
     fp = open(metadataDir + metadataFiles[0], 'a')
@@ -49,7 +51,7 @@ def write_meta(metadataID, datasetName):
     
     for x in js['columns']:
         if 'description' in x:
-            row = [datasetName, x['name'], x['description']]
+            row = [datasetTag, x['name'], x['description']]
             row = [x.encode('utf8').strip() for x in row]
             w.writerow(row)
 
@@ -60,25 +62,25 @@ def write_meta(metadataID, datasetName):
     w = csv.writer(fp)
 
     try:
-        row = [datasetName, "Data Owner", js['metadata']['custom_fields']['Metadata']['Data Owner']]
+        row = [datasetTag, "Data Owner", js['metadata']['custom_fields']['Metadata']['Data Owner']]
         row = [x.encode('utf8').strip() for x in row]
         w.writerow(row)
     except: pass
 
     try:
-        row = [datasetName, "Time Period", js['metadata']['custom_fields']['Metadata']['Time Period']]
+        row = [datasetTag, "Time Period", js['metadata']['custom_fields']['Metadata']['Time Period']]
         row = [x.encode('utf8').strip() for x in row]
         w.writerow(row)
     except: pass
 
     try:
-        row = [datasetName, "attribution", js['attribution']]
+        row = [datasetTag, "attribution", js['attribution']]
         row = [x.encode('utf8').strip() for x in row]
         w.writerow(row)
     except: pass
 
     try:
-        row = [datasetName, "category", js['category']]
+        row = [datasetTag, "category", js['category']]
         row = [x.encode('utf8').strip() for x in row]
         w.writerow(row)
     except: pass

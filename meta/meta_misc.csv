@@ -1,20 +1,16 @@
 dataset_name,meta_attribute_name,meta_attribute_value
-chicago-crimes-all,Data Owner,Police
-chicago-crimes-all,Time Period,"2001 to present, minus the most recent seven days"
-chicago-crimes-all,attribution,Chicago Police Department
-chicago-crimes-all,category,Public Safety
-chicago-business-licenses,Data Owner,Business Affairs & Consumer Protection
-chicago-business-licenses,Time Period,2006 to present
-chicago-business-licenses,attribution,City of Chicago
-chicago-business-licenses,category,Community & Economic Development
-chicago-environmental-complaints,Data Owner,Chicago Department of Public Health
-chicago-environmental-complaints,Time Period,
-chicago-environmental-complaints,attribution,Chicago Department of Public Health
-chicago-environmental-complaints,category,Environment & Sustainable Development
-chicago-311-graffiti_removal,Data Owner,Streets & Sanitation
-chicago-311-graffiti_removal,Time Period,"All open requests and all completed requests since January 1, 2011"
-chicago-311-graffiti_removal,attribution,City of Chicago
-chicago-311-graffiti_removal,category,Service Requests
+chicago_crimes_all,Data Owner,Police
+chicago_crimes_all,Time Period,"2001 to present, minus the most recent seven days"
+chicago_crimes_all,attribution,Chicago Police Department
+chicago_crimes_all,category,Public Safety
+chicago_environmental_complaints,Data Owner,Chicago Department of Public Health
+chicago_environmental_complaints,Time Period,
+chicago_environmental_complaints,attribution,Chicago Department of Public Health
+chicago_environmental_complaints,category,Environment & Sustainable Development
+chicago_311_graffiti_removal,Data Owner,Streets & Sanitation
+chicago_311_graffiti_removal,Time Period,"All open requests and all completed requests since January 1, 2011"
+chicago_311_graffiti_removal,attribution,City of Chicago
+chicago_311_graffiti_removal,category,Service Requests
 chicago_311_garbage_carts,Data Owner,Streets & Sanitation
 chicago_311_garbage_carts,Time Period,"All open requests and all completed requests since January 1, 2011"
 chicago_311_garbage_carts,attribution,City of Chicago

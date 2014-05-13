@@ -32,20 +32,37 @@ def adjust_types(datasetName, dataTypes, names):
      
     #locate dataset csv file
     datasetFiles = [f for f in os.listdir(datasetDir) if datasetName in f]
-    datasetFile = sorted(datasetFiles, key=lambda f: f[-14:-4])[0]
+    datasetFile = sorted(datasetFiles, key=lambda f: f[-14:-4])[-1]
     
-    #read part of csv file into dataframe
-    df = pd.read_csv(datasetDir + datasetFile, dtype=object, nrows=10000)
-    
-    #adjust length of varchar based on longest value, adjust numeric types
-    for i in range(len(dataTypes)):
-        if dataTypes[i] == "text" and names[i] in df.columns:
-            length = len(max(map(lambda x: str(x), df[names[i]]), key=len))
-            dataTypes[i] = "varchar(" + str(int(2*length)) + ")"
-        elif dataTypes[i] == "float8" and names[i] in df.columns:
-            if not any("." in x for x in map(lambda x: str(x), df[names[i]])):
-                dataTypes[i] = "integer"
+    #read in csv file in chunks
+    tmp = pd.read_csv(datasetDir + datasetFile, dtype=object, chunksize=1000000)
 
+    maxLen = [-1]*len(dataTypes)
+    isInt = [True]*len(dataTypes)
+
+    for chunk in tmp:
+        df = chunk
+        for i in range(len(dataTypes)):
+            if dataTypes[i] == "text" and names[i] in df.columns:
+                length = len(max(map(lambda x: str(x), df[names[i]]), key=len))
+                if length > maxLen[i]: maxLen[i] = length
+            if dataTypes[i] == "float8" and names[i] in df.columns:
+                if any("." in x for x in map(lambda x: str(x), df[names[i]])): isInt[i] = False
+
+    for i in range(len(dataTypes)):
+        if maxLen[i] >= 0: dataTypes[i] = "varchar(%d)" % (2*maxLen[i])
+        if dataTypes[i] == "float8" and isInt[i] == True: dataTypes[i] = "integer"
+    return dataTypes
+
+
+#make sure columns names are safe
+def adjust_columns(fieldNames, key, obsDate, obsTs):
+    maxLen = 63;
+    fieldNames = [x+"1" if x in typeConversion.viewvalues() else x[:maxLen] for x in fieldNames]
+    key = key+"1" if key in typeConversion.viewvalues() else key[:maxLen]
+    obsDate = obsDate+"1" if obsDate in typeConversion.viewvalues() else obsDate[:maxLen]
+    obsTs = obsTs+"1" if obsTs in typeConversion.viewvalues() else obsTs[:maxLen]
+    return fieldNames, key, obsDate, obsTs
 
 def write_map(metadataID, datasetName, key, obsDate, obsTs):
 
@@ -66,7 +83,8 @@ def write_map(metadataID, datasetName, key, obsDate, obsTs):
     if datasetName == "chicago-environmental-complaints":
         dataTypes = [t.replace("point", "text") for t in dataTypes]
 
-    adjust_types(datasetName, dataTypes, names)
+    dataTypes = adjust_types(datasetName, dataTypes, names)
+    fieldNames, key, obsDate, obsTs = adjust_columns(fieldNames, key, obsDate, obsTs)
 
     fp = open(mapDir + datasetName + ".map", 'w')
 

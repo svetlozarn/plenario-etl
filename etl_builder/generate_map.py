@@ -28,12 +28,8 @@ typeConversion = {
     "number" : "float8",
     "money" : "money"}
 
-def adjust_types(datasetName, dataTypes, names):
-     
-    #locate dataset csv file
-    datasetFiles = [f for f in os.listdir(datasetDir) if datasetName in f]
-    datasetFile = sorted(datasetFiles, key=lambda f: f[-14:-4])[-1]
-    
+
+def adjust_types(datasetName, datasetFile, dataTypes, names):
     #read in csv file in chunks
     tmp = pd.read_csv(datasetDir + datasetFile, dtype=object, chunksize=1000000)
 
@@ -64,7 +60,8 @@ def adjust_columns(fieldNames, key, obsDate, obsTs):
     obsTs = obsTs+"1" if obsTs in typeConversion.viewvalues() else obsTs[:maxLen]
     return fieldNames, key, obsDate, obsTs
 
-def write_map(metadataID, datasetName, key, obsDate, obsTs):
+
+def create_map(metadataID, datasetName, datasetFile, key, obsDate, obsTs):
 
     #load json file from city of Chicago
     js = urllib2.urlopen(metadataURL + metadataID)
@@ -83,12 +80,13 @@ def write_map(metadataID, datasetName, key, obsDate, obsTs):
     if datasetName == "chicago-environmental-complaints":
         dataTypes = [t.replace("point", "text") for t in dataTypes]
 
-    dataTypes = adjust_types(datasetName, dataTypes, names)
+    dataTypes = adjust_types(datasetName, datasetFile, dataTypes, names)
     fieldNames, key, obsDate, obsTs = adjust_columns(fieldNames, key, obsDate, obsTs)
+    return key, obsDate, obsTs, fieldNames, dataTypes
 
+
+def write_map(datasetName, key, obsDate, obsTs, fieldNames, dataTypes):
     fp = open(mapDir + datasetName + ".map", 'w')
-
-    #write the map
     fp.write("--dataset_name\n" + datasetName + "\n")
     fp.write("--key\n" + key + "\n")
     fp.write("--obs_date\n" + obsDate + "\n")
@@ -101,4 +99,7 @@ with open(datasetList, 'rb') as f:
     datasets = [row for row in reader]
 
 for (metadataID, datasetName, key, obsDate, obsTs) in datasets:
-    write_map(metadataID, datasetName, key, obsDate, obsTs)
+    datasetFiles = sorted([f for f in os.listdir(datasetDir) if datasetName in f], key=lambda f: f[-14:-4])
+    datasetFile = datasetFiles[0]
+    key, obsDate, obsTs, fieldNames, dataTypes = create_map(metadataID, datasetName, datasetFile, key, obsDate, obsTs)
+    write_map(datasetName, key, obsDate, obsTs, fieldNames, dataTypes)

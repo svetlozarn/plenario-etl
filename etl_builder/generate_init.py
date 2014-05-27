@@ -20,10 +20,14 @@ def write_init(mapFile):
     types = [x.split()[1].upper() for x in lines[9:len(lines)]]
 
     srcFiles = [f for f in os.listdir(datasetDir) if datasetName in f]
-    srcFile = sorted(srcFiles, key=lambda f: f[-14:-4])[-1]
+    srcFile = sorted(srcFiles, key=lambda f: f[-14:-4], reverse=True)[-1]
+#    srcFile = sorted(srcFiles, key=lambda f: f[-14:-4])[-2]
 
     startDate = srcFile[-14:-4]
     datasetTag = datasetName.replace("-", "_")
+
+    # debug info
+    print datasetTag, startDate
 
     create = [attributes[i] + " " + types[i] for i in range(0, len(attributes))]
     insert = [a for a in attributes]
@@ -47,12 +51,14 @@ POINT((regexp_matches(address, '\((.*)\)'))[1]) AS location,
 """
     
     sqlInit = """
+\\timing ON
+
 DROP TABLE IF EXISTS SRC_{datasettag};
         
 CREATE TABLE IF NOT EXISTS SRC_{datasettag}(
 {create},
-dup_ver SERIAL,
-PRIMARY KEY({srckey}, dup_ver));
+line_num SERIAL,
+PRIMARY KEY(line_num));
         
 \copy SRC_{datasettag}({copy}) FROM '{path}' WITH DELIMITER ',' CSV HEADER;
         
@@ -74,7 +80,7 @@ dup_ver,
 {insertloc}{insert})
 SELECT
 '{startdate}' AS start_date,
-dup_ver,
+RANK () OVER (PARTITION BY {srckey} ORDER BY line_num DESC), 
 {parseloc}{insert}
 FROM SRC_{datasettag};
         

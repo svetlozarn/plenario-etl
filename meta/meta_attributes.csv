@@ -1,6 +1,4 @@
 dataset_name,attribute_name,attribute_description
-chicago_crimes_all,District,District
-chicago_crimes_all,Community Area,Community Area
 chicago_environmental_complaints,COMPLAINT ID,"The unique identifier of the complaint incident. For Historic Department of Environment records, this ID is prefixed with ""DOECOMP""."
 chicago_environmental_complaints,COMPLAINT TYPE,Specifies the type of complaint work order.
 chicago_environmental_complaints,STREET NUMBER FROM,"The numerical portion of the address. For ranged address, this is the lower number of the range."
@@ -41,3 +39,5 @@ chicago_311_vacant_and_abandoned_building,ADDRESS STREET NUMBER,Address Street N
 chicago_311_vacant_and_abandoned_building,ADDRESS STREET DIRECTION,Address Street Direction
 chicago_311_vacant_and_abandoned_building,ADDRESS STREET NAME,Address Street Name
 chicago_311_vacant_and_abandoned_building,ADDRESS STREET SUFFIX,Address Street Suffix
+chicago_crimes_all,District,District
+chicago_crimes_all,Community Area,Community Area

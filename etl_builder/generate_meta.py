@@ -10,7 +10,6 @@ import csv
 metadataURL = "https://data.cityofchicago.org/api/views/"
 dataURL = "https://data.cityofchicago.org/d/"
 datasetList = "datasets.csv"
-datasetDir = "/project/evtimov/wopr/data/"
 metadataDir = "../meta/"
 metadataFiles = ["meta_master.csv", "meta_attributes.csv", "meta_misc.csv"]
 
@@ -34,7 +33,7 @@ def write_meta(metadataID, datasetName):
 
     try: updateFreq = js['metadata']['custom_fields']['Metadata']['Frequency']
     except: updateFreq = ""
-    
+
     obsFrom = obsTo = bbox = ""
     
     row = [datasetTag, humanName, description, sourceURL, obsFrom, obsTo, bbox, updateFreq]

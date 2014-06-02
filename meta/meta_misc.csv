@@ -1,8 +1,4 @@
 dataset_name,meta_attribute_name,meta_attribute_value
-chicago_crimes_all,Data Owner,Police
-chicago_crimes_all,Time Period,"2001 to present, minus the most recent seven days"
-chicago_crimes_all,attribution,Chicago Police Department
-chicago_crimes_all,category,Public Safety
 chicago_environmental_complaints,Data Owner,Chicago Department of Public Health
 chicago_environmental_complaints,Time Period,
 chicago_environmental_complaints,attribution,Chicago Department of Public Health
@@ -55,3 +51,7 @@ chicago_311_vacant_and_abandoned_building,Data Owner,Buildings
 chicago_311_vacant_and_abandoned_building,Time Period,"All completed requests since January 1, 2010"
 chicago_311_vacant_and_abandoned_building,attribution,City of Chicago
 chicago_311_vacant_and_abandoned_building,category,Service Requests
+chicago_crimes_all,Data Owner,Police
+chicago_crimes_all,Time Period,"2001 to present, minus the most recent seven days"
+chicago_crimes_all,attribution,Chicago Police Department
+chicago_crimes_all,category,Public Safety

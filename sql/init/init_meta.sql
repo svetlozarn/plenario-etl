@@ -43,8 +43,14 @@ CREATE TABLE meta_misc(
 
 
 UPDATE meta_master
-SET obs_from = x, obs_to = y
-FROM (SELECT dataset_name, MIN(obs_date) AS x, MAX(obs_date) AS y
+SET obs_from = A.first, obs_to = A.last, bbox = ST_MakeEnvelope(A.left, A.bottom, A.right, A.top, 4326)
+FROM (SELECT dataset_name,
+	     MIN(obs_date) AS first,
+	     MAX(obs_date) AS last,
+	     MIN(longitude) AS left, 
+	     MIN(latitude) AS bottom, 
+	     MAX(longitude) AS right, 
+	     MAX(latitude) AS top 
       FROM dat_master
       GROUP BY dataset_name) A
 WHERE A.dataset_name = meta_master.dataset_name;

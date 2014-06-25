@@ -19,9 +19,10 @@ def write_init(mapFile):
     attributes = [x.split()[0].lower() for x in lines[9:len(lines)]]
     types = [x.split()[1].upper() for x in lines[9:len(lines)]]
 
+    # assumes data file naming convention is: datasetname_yyyy-mm-dd.csv
     srcFiles = [f for f in os.listdir(datasetDir) if datasetName in f]
     srcFile = sorted(srcFiles, key=lambda f: f[-14:-4], reverse=True)[-1]
-#    srcFile = sorted(srcFiles, key=lambda f: f[-14:-4])[-2]
+    #srcFile = sorted(srcFiles, key=lambda f: f[-14:-4])[-2]
 
     startDate = srcFile[-14:-4]
     datasetTag = datasetName.replace("-", "_")

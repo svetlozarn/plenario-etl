@@ -223,6 +223,10 @@ COL_TYPES = {
 
 
 if __name__ == "__main__":
+    """
+    TODO
+    Need to specify username, password, hostname, port, database
+    """
     wopr_conn = 'postgresql://'+username + ':' + password + '@' + hostname + ':' + port + '/' + database
     app_engine = create_engine(wopr_conn, convert_unicode=True)
     task_engine = create_engine(

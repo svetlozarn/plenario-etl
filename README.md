@@ -31,6 +31,7 @@ python generate_init.py
 * Svetlozar Nestorov
 * Amanda Lund
 * Jiajun Shen
+
 ## Errors / Bugs
 
 If something is not behaving intuitively, it is a bug, and should be reported.

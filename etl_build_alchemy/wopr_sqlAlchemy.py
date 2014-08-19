@@ -223,12 +223,6 @@ COL_TYPES = {
 
 
 if __name__ == "__main__":
-        
-    hostname = '54.225.104.87'
-    port = '5432'
-    database = 'woprdevdb'
-    username = 'wopr_dev'
-    password = 'wire rays social dig'
     wopr_conn = 'postgresql://'+username + ':' + password + '@' + hostname + ':' + port + '/' + database
     app_engine = create_engine(wopr_conn, convert_unicode=True)
     task_engine = create_engine(
